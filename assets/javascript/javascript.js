@@ -12,16 +12,27 @@ var losses;
 
 
 for(var i = 0; i < 4; i++){
-    //assigning random number to crystals
-    var random = Math.floor(Math.random() * 12);
-    //dynamically creating the crystal variables
-    var crystal = $("<div>");
-        crystal.attr({
+    var random = Math.floor(Math.random() * 11) + 1; //assigning random number to crystals do not = 0 
+    var crystal = $("<div>");  //dynamically creating the crystal variables
+        crystal.attr({ // assigning a class and random number 
         "class": "crystal",
         "random-number": random
         });
+    $(".crystals").append(crystal); 
+    
+    var images = ["assets/images/crystal_1.jpg", "assets/images/crystal_2.jpg", "assets/images/crystal_3.jpg", "assets/images/crystal_4.jpg"]
+
+    crystal.css({
+        "background-image":"url('" + (images[i]) + "')",
+        "background-size":"cover"
+
+    });
+
     $(".crystals").append(crystal);
 }
 
+
 randomResult = Math.floor(Math.random() * 101) + 19;
 $("#result").html("<h1>Random Number:" + randomResult + "</h1>");
+
+
