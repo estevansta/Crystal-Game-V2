@@ -6,3 +6,12 @@
 // if total score = random result, WIN that incriments a win counter + win message; if not then lose and restart
 
 
+var randomResult;
+var wins;
+var losses;
+
+//dynamically creating the crystal variables
+
+for (var i = 0; i < 4; i++){
+    console.log("hello");
+}
