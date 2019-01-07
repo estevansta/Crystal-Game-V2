@@ -10,10 +10,13 @@ var randomResult;
 var wins;
 var losses;
 
-//dynamically creating the crystal variables
-
 
 for(var i = 0; i < 4; i++){
+    //assigning random number to crystals
+    var random = Math.floor(Math.random() * 12);
+    console.log(random);
+    //dynamically creating the crystal variables
     var crystal = $("<div>");
     $(".crystals").append(crystal);
+    
 }
