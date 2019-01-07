@@ -9,6 +9,7 @@
 var randomResult;
 var wins;
 var losses;
+var previous = 0;
 
 
 for(var i = 0; i < 4; i++){
@@ -20,19 +21,23 @@ for(var i = 0; i < 4; i++){
         });
     $(".crystals").append(crystal); 
     
+    //displaying crystal images from assets as well as assigning images to the dynamically generated div
     var images = ["assets/images/crystal_1.jpg", "assets/images/crystal_2.jpg", "assets/images/crystal_3.jpg", "assets/images/crystal_4.jpg"]
 
     crystal.css({
         "background-image":"url('" + (images[i]) + "')",
         "background-size":"cover"
-
     });
-
     $(".crystals").append(crystal);
+
 }
-
-
 randomResult = Math.floor(Math.random() * 101) + 19;
-$("#result").html("<h1>Random Number:" + randomResult + "</h1>");
+    $("#result").html("<h1>Random Number:" + randomResult + "</h1>");
 
+   //onclick function and adding random number value to "your score"/previous
+   $(document).on("click", ".crystals", function () {
 
+    var num = parseInt($(this).attr('data-random'));
+   console.log(crystal);
+
+   });    
