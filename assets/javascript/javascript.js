@@ -16,6 +16,10 @@ for(var i = 0; i < 4; i++){
     var random = Math.floor(Math.random() * 12);
     //dynamically creating the crystal variables
     var crystal = $("<div>");
+        crystal.attr({
+        "class": "crystal",
+        "random-number": random
+        });
     $(".crystals").append(crystal);
     
 }
