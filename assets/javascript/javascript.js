@@ -12,6 +12,8 @@ var losses;
 
 //dynamically creating the crystal variables
 
-for (var i = 0; i < 4; i++){
-    console.log("hello");
+
+for(var i = 0; i < 4; i++){
+    var crystal = $("<div>");
+    $(".crystals").append(crystal);
 }
