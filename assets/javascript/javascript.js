@@ -21,5 +21,7 @@ for(var i = 0; i < 4; i++){
         "random-number": random
         });
     $(".crystals").append(crystal);
-    
 }
+
+randomResult = Math.floor(Math.random() * 101) + 19;
+$("#result").html("<h1>Random Number:" + randomResult + "</h1>");
